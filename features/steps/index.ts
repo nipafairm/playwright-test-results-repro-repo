@@ -7,6 +7,8 @@ Given('I am on Playwright home page', async ({ page }) => {
 
 When('I click link {string}', async ({ page }, name: string) => {
   await page.getByRole('link', { name }).click();
+
+  console.log(`Clicked on link: ${name}`);
 });
 
 Then('I see in title {string}', async ({ page }, text: string) => {
